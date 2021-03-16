@@ -2,7 +2,8 @@
 % Please edit documentation in R/sims.R
 \name{lmSim}
 \alias{lmSim}
-\title{Simulation for a linear model}
+\title{The powR R package is currently still under development.
+Functions for different model simulations are being created.}
 \usage{
 lmSim(n, f)
 }

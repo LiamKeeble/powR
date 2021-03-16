@@ -1,6 +1,3 @@
-#' The powR R package is currently still under development.
-#' Functions for different model simulations are being created.
-#' 
 
 #' Simulation for a linear model
 #' @param n sample size
