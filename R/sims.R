@@ -1,8 +1,9 @@
 
 
 #' Simulation for a linear model
-#' Arguments: n=sample size, and f=effect size between a control and experiment 
-#' group
+#' @param n sample size
+#' @param f effect size
+#' @return A summary table of the model results
 #' @export
 
 lmSim=function(n,f){
@@ -14,7 +15,19 @@ return(summary(m))
 }
 
 
+#' Power simulation for a model function
+#' @param mod A model simulation
+#' @return Value of statistical power
+#' @export
 
+
+powSim=function(mod){
+output=NULL
+for (i in 1:100){
+output[i]=mod
+return(output)
+}
+}
 
 
 
