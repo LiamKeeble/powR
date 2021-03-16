@@ -12,7 +12,7 @@ Currently, the only analysis that can be simulated is a basic linear model with 
 
 Eventually, I hope to allow the user to simulate essentially any analysis and pass it through the power2() function, so that more scientists will be encouraged to simulate their analyses in the study planning stage, before collecting data.
 
-#Installation
+# Installation
 
 The package can be installed in the usual way for an R package in developments:
 
@@ -22,7 +22,7 @@ devtools::install_github("LiamKeeble/powR")
 '''
 
 
-#Dependencies
+# Dependencies
 
 At the moment, there are no dependencies for this package.
 
