@@ -2,7 +2,17 @@
 % Please edit documentation in R/sims.R
 \name{power2}
 \alias{power2}
-\title{Power simulation from model simulation}
+\title{Simulation for binomial generalised linear model
+Simulation for binomial generalised linear model that only returns p values
+Simulation of poisson generalised linear model
+Simulation os Poissons generalised linear model that only returns p values
+Simulation of lm with random effects variable
+Simulation of lm with random effects returning only p values
+Simulation of binomial glm with random effects variable
+Simulation of binomial glm with random effects variable returning only p values
+Simulation of poisson glm with random effects
+Simulation of poisson glm with random effects returning only p values
+Power simulation from model simulation}
 \usage{
 power2(mod)
 }
@@ -13,5 +23,15 @@ power2(mod)
 Statistical power value for model
 }
 \description{
+Simulation for binomial generalised linear model
+Simulation for binomial generalised linear model that only returns p values
+Simulation of poisson generalised linear model
+Simulation os Poissons generalised linear model that only returns p values
+Simulation of lm with random effects variable
+Simulation of lm with random effects returning only p values
+Simulation of binomial glm with random effects variable
+Simulation of binomial glm with random effects variable returning only p values
+Simulation of poisson glm with random effects
+Simulation of poisson glm with random effects returning only p values
 Power simulation from model simulation
 }

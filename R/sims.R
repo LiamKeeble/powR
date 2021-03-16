@@ -32,33 +32,33 @@ return(summary(m)$coefficients[2,4])
 
 
 
-#' Average p value simulation for a model function
-#' @param mod A model simulation
-#' @return P-values across simulations
-#' @export
 
-
-pSim=function(mod){
-output=NULL
-for (i in 1:100){
-output[i]=mod
-return(output)
-}
-}
+#' Simulation for binomial generalised linear model
 
 
 
-#' Power simulation from p value simulation
-#' @param pSim p value simulation
-#' @return Statistical power value for model
-#' @export
+#' Simulation for binomial generalised linear model that only returns p values
 
-power=function(pSim){
-p=pSim
-power=mean(p<0.05)
-power
-}
 
+
+#' Simulation of poisson generalised linear model
+
+
+#' Simulation os Poissons generalised linear model that only returns p values
+
+
+#' Simulation of lm with random effects variable
+
+#' Simulation of lm with random effects returning only p values
+
+
+#' Simulation of binomial glm with random effects variable
+
+#' Simulation of binomial glm with random effects variable returning only p values
+
+#' Simulation of poisson glm with random effects
+
+#' Simulation of poisson glm with random effects returning only p values
 
 
 #' Power simulation from model simulation
