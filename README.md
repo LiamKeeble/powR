@@ -16,11 +16,10 @@ Eventually, I hope to allow the user to simulate essentially any analysis and pa
 
 The package can be installed in the usual way for an R package in developments:
 
-'''
+```
 devtools::install_github("LiamKeeble/powR")
 
-'''
-
+```
 
 # Dependencies
 
