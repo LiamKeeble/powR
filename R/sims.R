@@ -48,7 +48,7 @@ return(output)
 
 
 
-#' Power simulation
+#' Power simulation from p value simulation
 #' @param pSim p value simulation
 #' @return Statistical power value for model
 #' @export
@@ -58,6 +58,27 @@ p=pSim
 power=mean(p<0.05)
 power
 }
+
+
+
+#' Power simulation from model simulation
+#' @param Model simulation
+#' @return Statistical power value for model
+#' @export
+
+power2=function(mod){
+output=NULL
+for(i in 1:100){
+output[i]=mod
+}
+p=output[i]
+power=mean(p<0.05)
+power
+}
+
+
+
+
 
 
 
