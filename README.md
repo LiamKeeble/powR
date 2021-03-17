@@ -20,10 +20,7 @@ devtools::install_github("LiamKeeble/powR")
 
 # Dependencies
 
-At the moment, there is only one dependency necessary for this package: ggplot2 for plotting p values distributions.
-
-However, the package will likely require the packages 'lme4' and 'metafor' in the future.
-
+Current dependencies are the ggplot2 and metafor r packages. lme4 is soon to be a dependency.
 
 
 
