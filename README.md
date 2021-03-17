@@ -26,8 +26,6 @@ Current dependencies are the ggplot2 and metafor r packages. lme4 is soon to be 
 
 # Usage 
 
-All functions currently take only two to three arguments: n= sample size of a proposed study, f = effect size for a proposed study, and iter = number of iterations of model simulations for functions where this is necessary.
-
 See the 'man' folder for individual functions and their usage.
 
 
