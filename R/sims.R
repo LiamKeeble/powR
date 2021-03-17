@@ -83,13 +83,40 @@ power=mean(p<0.05)
 power
 }
 
+
+
+#' Plot distribution of p-values from binomial generalised linear model
+#' @param n sample size
+#' @param f effect size
+#' @param iter number of iterations of simulation
+#' @return plot of distribution of p-values
+#' @export
+
+powBinGlmPlot=function(n,f,iter){
+output=NULL
+for (i in 1:iter){
+output[i]=binGlmP(n=n,f=f)
+}
+output=data.frame(output)
+
+plot=ggplot2::ggplot(output, aes(output))+
+	geom_density()+
+	ggtitle("Density plot of p-values")+
+	xlab("P values")+
+	ylab("Frequency of values")+
+	geom_vline(aes(xintercept=0.05))
+
+plot
+}
+
 #' Plot p-values from basic linear model simulations
 #' @param n sample size
 #' @param f effect size
+#' @param iter number of iterations of simulation
 #' @return plot of p values
 #' @export
 
-powPlot=function(n,f,iter){
+powLmPlot=function(n,f,iter){
 
 	output=NULL
 	for (i in 1:iter){

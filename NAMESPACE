@@ -3,6 +3,7 @@
 export(binGlmP)
 export(lmP)
 export(lmSim)
-export(powPlot)
+export(powBinGlmPlot)
+export(powLmPlot)
 export(powerBinGlm)
 export(powerlm)
