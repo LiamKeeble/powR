@@ -3,4 +3,4 @@
 export(lmP)
 export(lmSim)
 export(powPlot)
-export(power2)
+export(powerlm)

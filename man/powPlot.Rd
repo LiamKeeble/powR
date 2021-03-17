@@ -4,7 +4,7 @@
 \alias{powPlot}
 \title{Plot p-values from basic linear model simulations}
 \usage{
-powPlot(n, f)
+powPlot(n, f, iter)
 }
 \arguments{
 \item{n}{sample size}
