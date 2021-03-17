@@ -84,7 +84,6 @@ power
 }
 
 
-
 #' Plot distribution of p-values from binomial generalised linear model
 #' @param n sample size
 #' @param f effect size
@@ -108,6 +107,8 @@ plot=ggplot2::ggplot(output, aes(output))+
 
 plot
 }
+
+
 
 #' Plot p-values from basic linear model simulations
 #' @param n sample size
