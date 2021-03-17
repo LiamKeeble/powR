@@ -12,12 +12,14 @@ Simulation of binomial glm with random effects variable
 Simulation of binomial glm with random effects variable returning only p values
 Simulation of poisson glm with random effects
 Simulation of poisson glm with random effects returning only p values
-Power simulation from model simulation}
+Power simulation for basic linear model}
 \usage{
-power2(mod)
+power2(n, f)
 }
 \arguments{
-\item{Model}{simulation}
+\item{n}{sample size}
+
+\item{f}{effect size}
 }
 \value{
 Statistical power value for model
@@ -33,5 +35,5 @@ Simulation of binomial glm with random effects variable
 Simulation of binomial glm with random effects variable returning only p values
 Simulation of poisson glm with random effects
 Simulation of poisson glm with random effects returning only p values
-Power simulation from model simulation
+Power simulation for basic linear model
 }

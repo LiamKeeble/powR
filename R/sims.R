@@ -60,48 +60,48 @@ return(summary(m)$coefficients[2,4])
 #' Simulation of poisson glm with random effects returning only p values
 
 
-#' Power simulation from model simulation
-#' @param mod Model simulation
+#' Power simulation for basic linear model
+#' @param n sample size
+#' @param f effect size
 #' @return Statistical power value for model
 #' @export
 
-power2=function(mod){
+power2=function(n,f){
+
 output=NULL
 for(i in 1:100){
-output[i]=mod
+output[i]=lmP(n=n, f=f)
 }
-p=output[i]
+
+p=output
 power=mean(p<0.05)
 power
 }
 
 
 
-#' Simulation of p values from analysis
-#' @param mod model simulation
-#' @return vector of p values from simulation
-#' @export
-
-pSim=function(mod){
-output=NULL
-for (i in 1:100){
-output[i]=mod
-}
-}
-
-
-
-#' Plot p-values and average p-value
-#' @param pSim p value simulation
+#' Plot p-values from basic linear model simulations
+#' @param n sample size
+#' @param f effect size
 #' @return plot of p values
 #' @export
 
-powPlot=function(pSim){
-	
-ggplot2::ggplot(pSim, aes(pSim))+
-geom_density(kernel="gaussian")
+powPlot=function(n,f){
 
-abline(v=0.05,col="red")
+	output=NULL
+	for (i in 1:100){
+	output[i]=lmP(n=n,f=f)
+	}
+	
+	output=data.frame(output)	
+
+	plot=ggplot2::ggplot(output,aes(output))+
+		geom_density()+
+		ggtitle("Density plot of p values")+
+		xlab("P values")+
+		ylab("Frequency of values")+
+		geom_vline(aes(xintercept=0.05))
+	plot
 
 }
 
