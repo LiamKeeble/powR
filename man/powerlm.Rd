@@ -2,17 +2,7 @@
 % Please edit documentation in R/sims.R
 \name{powerlm}
 \alias{powerlm}
-\title{Simulation for binomial generalised linear model
-Simulation for binomial generalised linear model that only returns p values
-Simulation of poisson generalised linear model
-Simulation os Poissons generalised linear model that only returns p values
-Simulation of lm with random effects variable
-Simulation of lm with random effects returning only p values
-Simulation of binomial glm with random effects variable
-Simulation of binomial glm with random effects variable returning only p values
-Simulation of poisson glm with random effects
-Simulation of poisson glm with random effects returning only p values
-Power simulation for basic linear model}
+\title{Power simulation for basic linear model with a two level categorical predictor}
 \usage{
 powerlm(n, f, iter)
 }
@@ -20,20 +10,12 @@ powerlm(n, f, iter)
 \item{n}{sample size}
 
 \item{f}{effect size}
+
+\item{iter}{number of iterations of simulation}
 }
 \value{
 Statistical power value for model
 }
 \description{
-Simulation for binomial generalised linear model
-Simulation for binomial generalised linear model that only returns p values
-Simulation of poisson generalised linear model
-Simulation os Poissons generalised linear model that only returns p values
-Simulation of lm with random effects variable
-Simulation of lm with random effects returning only p values
-Simulation of binomial glm with random effects variable
-Simulation of binomial glm with random effects variable returning only p values
-Simulation of poisson glm with random effects
-Simulation of poisson glm with random effects returning only p values
-Power simulation for basic linear model
+Power simulation for basic linear model with a two level categorical predictor
 }
