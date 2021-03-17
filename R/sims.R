@@ -66,10 +66,10 @@ return(summary(m)$coefficients[2,4])
 #' @return Statistical power value for model
 #' @export
 
-power2=function(n,f){
+powerlm=function(n,f,iter){
 
 output=NULL
-for(i in 1:100){
+for(i in 1:iter){
 output[i]=lmP(n=n, f=f)
 }
 
@@ -86,10 +86,10 @@ power
 #' @return plot of p values
 #' @export
 
-powPlot=function(n,f){
+powPlot=function(n,f,iter){
 
 	output=NULL
-	for (i in 1:100){
+	for (i in 1:iter){
 	output[i]=lmP(n=n,f=f)
 	}
 	

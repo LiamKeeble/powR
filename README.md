@@ -23,8 +23,20 @@ devtools::install_github("LiamKeeble/powR")
 
 # Dependencies
 
-At the moment, there are no dependencies for this package.
+At the moment, there is only one dependency necessary for this package: ggplot2 for plotting p values distributions.
 
 However, the package will likely require the packages 'lme4' and 'metafor' in the future.
+
+
+
+
+# Usage 
+
+All functions currently take only two arguments: n= sample size of a proposed study, f = effect size for a proposed study, and iter = number of iterations of model simulations for functions where this is necessary.
+
+Functions currently allow simulation of a linear model with a single predictor that returns a summary table for that analysis, a simulation of a linear model with a single predictor that returns a p-value only for that analysis, power analysis for a analysis involving a linear model with a single predictor, and a density plot for p values of a proposed analysis.
+
+
+
 
 
