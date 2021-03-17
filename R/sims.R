@@ -61,7 +61,7 @@ return(summary(m)$coefficients[2,4])
 
 
 #' Power simulation from model simulation
-#' @param Model simulation
+#' @param mod Model simulation
 #' @return Statistical power value for model
 #' @export
 
@@ -74,6 +74,37 @@ p=output[i]
 power=mean(p<0.05)
 power
 }
+
+
+
+#' Simulation of p values from analysis
+#' @param mod model simulation
+#' @return vector of p values from simulation
+#' @export
+
+pSim=function(mod){
+output=NULL
+for (i in 1:100){
+output[i]=mod
+}
+}
+
+
+
+#' Plot p-values and average p-value
+#' @param pSim p value simulation
+#' @return plot of p values
+#' @export
+
+powPlot=function(pSim){
+	
+ggplot2::ggplot(pSim, aes(pSim))+
+geom_density(kernel="gaussian")
+
+abline(v=0.05,col="red")
+
+}
+
 
 
 
