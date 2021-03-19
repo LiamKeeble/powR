@@ -1,4 +1,34 @@
 
+
+
+
+
+#' Simulate experimental data with continuous outcome
+#' @param n sample size
+#' @param mean1 mean of dependent variable for control group
+#' @param var1 standard deviation of dependent variable for experimental group
+#' @export
+
+expCont2=function(n,mean1,var1,mean2,var2){
+out1=c(rnorm(n/2,mean1,var1),rnorm(n/2,mean2,var2))
+conditions=c(rep("control",n/2),rep("experimental",n/2))
+return(data.frame(out1,conditions))
+}
+
+
+#' Simulate experimental data with binomial outcome
+#' @param n sample size
+#' @param prob1 Probability of success for control group
+#' @param prob2 Probability of success for experimental group
+#' @export
+
+expBin2=function(n,prob1,prob2){
+out1=c(rbinom(n/2,1,prob1),rbinom(n/2,1,prob2))
+conditions=c(rep("control",n/2),rep("experimental",n/2))
+return(data.frame(out1,conditions))
+}
+
+
 #' Simulation for a linear model
 #' @param n sample size
 #' @param f effect size
