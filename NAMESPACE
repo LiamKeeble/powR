@@ -2,7 +2,9 @@
 
 export(binGlmP)
 export(expBin2)
+export(expBin3)
 export(expCont2)
+export(expCont3)
 export(lmP)
 export(lmSim)
 export(metaRsim)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/sims.R
 \name{expCont2}
 \alias{expCont2}
-\title{Simulate experimental data with continuous outcome}
+\title{Simulate experimental data with two conditions and a continuous outcome}
 \usage{
 expCont2(n, mean1, var1, mean2, var2)
 }
@@ -14,5 +14,5 @@ expCont2(n, mean1, var1, mean2, var2)
 \item{var1}{standard deviation of dependent variable for experimental group}
 }
 \description{
-Simulate experimental data with continuous outcome
+Simulate experimental data with two conditions and a continuous outcome
 }

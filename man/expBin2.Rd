@@ -2,7 +2,7 @@
 % Please edit documentation in R/sims.R
 \name{expBin2}
 \alias{expBin2}
-\title{Simulate experimental data with binomial outcome}
+\title{Simulate experimental data with two conditions and a binomial outcome}
 \usage{
 expBin2(n, prob1, prob2)
 }
@@ -14,5 +14,5 @@ expBin2(n, prob1, prob2)
 \item{prob2}{Probability of success for experimental group}
 }
 \description{
-Simulate experimental data with binomial outcome
+Simulate experimental data with two conditions and a binomial outcome
 }

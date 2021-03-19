@@ -3,7 +3,7 @@
 
 
 
-#' Simulate experimental data with continuous outcome
+#' Simulate experimental data with two conditions and a continuous outcome
 #' @param n sample size
 #' @param mean1 mean of dependent variable for control group
 #' @param var1 standard deviation of dependent variable for experimental group
@@ -16,7 +16,7 @@ return(data.frame(out1,conditions))
 }
 
 
-#' Simulate experimental data with binomial outcome
+#' Simulate experimental data with two conditions and a binomial outcome
 #' @param n sample size
 #' @param prob1 Probability of success for control group
 #' @param prob2 Probability of success for experimental group
@@ -27,6 +27,39 @@ out1=c(rbinom(n/2,1,prob1),rbinom(n/2,1,prob2))
 conditions=c(rep("control",n/2),rep("experimental",n/2))
 return(data.frame(out1,conditions))
 }
+
+
+#' Simulate experimental data with three conditions and a continuous outcome
+#' @param n sample size
+#' @param mean1 mean of dependent variable for experimental group 1
+#' @param var1 standard deviation for experimental group2
+#' @param mean2 mean of dependent variable for experimental group 2
+#' @param var2 standard deviation for experimental group 2
+#' @param mean3 mean of dependent variable for experimental group 3
+#' @param var3 standard deviation for experimental group 3
+#' @export
+
+expCont3=function(n,mean1,var1,mean2,var2,mean3,var3){
+
+out1=c(rnorm(n/3,mean1,var1),rnorm(n/3,mean2,var2),rnorm(n/3,mean3,var3))
+conditions=c(rep("group1",n/3),rep("group2",n/3),rep("group3",n/3))
+return(data.frame(out1,conditions))
+}
+
+
+#' Simulate experimental data with three conditions and a binomial outcome
+#' @param n sample size
+#' @param prob1 Probability of success for group 1
+#' @param prob2 Probability of success for group 2
+#' @param prob3 Probability of success for group 3
+#' @export
+
+expBin3=function(n,prob1,prob2,prob3){
+out1=c(rbinom(n/3,1,prob1),rbinom(n/3,1,prob2),rbinom(n/3,1,prob3))
+conditions=c(rep("group1",n/3),rep("group2",n/3),rep("group3",n/3))
+return(data.frame(out1,conditions))
+}
+
 
 
 #' Simulation for a linear model
