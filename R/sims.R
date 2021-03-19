@@ -189,7 +189,7 @@ power
 #' @return plot of distribution of p-values
 #' @export
 
-powBinGlmPlot=function(n,f,iter=100){
+powGlmPlot=function(n,f,iter=100){
 output=NULL
 for (i in 1:iter){
 output[i]=binGlmP(n=n,f=f)
@@ -201,7 +201,8 @@ plot=ggplot2::ggplot(output, aes(output))+
 	ggtitle("Density plot of p-values")+
 	xlab("P values")+
 	ylab("Frequency of values")+
-	geom_vline(aes(xintercept=0.05))
+	geom_vline(aes(xintercept=0.05))+
+	xlim(0,1)
 
 plot
 }
@@ -217,7 +218,7 @@ plot
 #' @return plot of distribution of p values
 #' @export
 
-powMetaRPlot=function(n,f,var,iter=100){
+powMetaPlot=function(n,f,var,iter=100){
 output=NULL
 for (i in 1:iter){
 output[i]=metaRsim(n=n,f=f,var=var)
@@ -228,8 +229,9 @@ plot=ggplot2::ggplot(output, aes(output))+
 	ggtitle("Density plot of p-values")+
 	xlab("P values")+
 	ylab("Frequency of values")+
-	geom_vline(aes(xintercept=0.05))
-
+	geom_vline(aes(xintercept=0.05))+
+	xlim(0,1)
+	
 plot
 }
 
@@ -256,7 +258,8 @@ powLmPlot=function(n,f,iter=100){
 		ggtitle("Density plot of p values")+
 		xlab("P values")+
 		ylab("Frequency of values")+
-		geom_vline(aes(xintercept=0.05))
+		geom_vline(aes(xintercept=0.05))+
+		xlim(0,1)
 	plot
 
 }
