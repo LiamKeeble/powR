@@ -26,7 +26,18 @@ Current dependencies are the ggplot2 and metafor r packages. lme4 is soon to be 
 
 # Usage 
 
-See the 'man' folder for individual functions and their usage.
+See the 'man' folder for individual functions and their usage. Examples will soon be posted below.
 
+
+# Data simulation
+
+
+# Model simulation
+
+
+# Power simulation
+
+
+# Plotting power
 
 
