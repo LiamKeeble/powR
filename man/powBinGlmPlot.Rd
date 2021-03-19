@@ -4,7 +4,7 @@
 \alias{powBinGlmPlot}
 \title{Plot distribution of p-values from binomial generalised linear model}
 \usage{
-powBinGlmPlot(n, f, iter)
+powBinGlmPlot(n, f, iter = 100)
 }
 \arguments{
 \item{n}{sample size}

@@ -4,7 +4,7 @@
 \alias{powLmPlot}
 \title{Plot p-values from basic linear model simulations}
 \usage{
-powLmPlot(n, f, iter)
+powLmPlot(n, f, iter = 100)
 }
 \arguments{
 \item{n}{sample size}

@@ -100,7 +100,7 @@ return(summary(m)$coefficients[2,4])
 #' @return Statistical power value for model
 #' @export
 
-powerlm=function(n,f,iter){
+powerlm=function(n,f,iter=100){
 
 output=NULL
 for(i in 1:iter){
@@ -151,7 +151,7 @@ return(summary(m)$pval)
 #' @return statistical power value for model
 #' @export
 
-powerBinGlm=function(n,f,iter){
+powerBinGlm=function(n,f,iter=100){
 output=NULL
 for (i in 1:iter){
 output[i]=binGlmP(n=n,f=f)
@@ -170,7 +170,7 @@ power
 #' @return statistical power for meta analysis
 #' @export
 
-powerMetaR=function(n,f,var,iter){
+powerMetaR=function(n,f,var,iter=100){
 output=NULL
 for (i in 1:iter){
 output[i]=metaRsim(n=n,f=f,var=var)
@@ -189,7 +189,7 @@ power
 #' @return plot of distribution of p-values
 #' @export
 
-powBinGlmPlot=function(n,f,iter){
+powBinGlmPlot=function(n,f,iter=100){
 output=NULL
 for (i in 1:iter){
 output[i]=binGlmP(n=n,f=f)
@@ -217,7 +217,7 @@ plot
 #' @return plot of distribution of p values
 #' @export
 
-powMetaRPlot=function(n,f,var,iter){
+powMetaRPlot=function(n,f,var,iter=100){
 output=NULL
 for (i in 1:iter){
 output[i]=metaRsim(n=n,f=f,var=var)
@@ -242,7 +242,7 @@ plot
 #' @return plot of p values
 #' @export
 
-powLmPlot=function(n,f,iter){
+powLmPlot=function(n,f,iter=100){
 
 	output=NULL
 	for (i in 1:iter){

@@ -4,7 +4,7 @@
 \alias{powMetaRPlot}
 \title{Plot distribution of p values from meta analysis random effects model}
 \usage{
-powMetaRPlot(n, f, var, iter)
+powMetaRPlot(n, f, var, iter = 100)
 }
 \arguments{
 \item{n}{sample size}

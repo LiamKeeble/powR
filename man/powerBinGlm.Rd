@@ -4,7 +4,7 @@
 \alias{powerBinGlm}
 \title{Power simulation for binomial generalised linear model with two level categorical predictor}
 \usage{
-powerBinGlm(n, f, iter)
+powerBinGlm(n, f, iter = 100)
 }
 \arguments{
 \item{n}{sample size}

@@ -4,7 +4,7 @@
 \alias{powerlm}
 \title{Power simulation for basic linear model with a two level categorical predictor}
 \usage{
-powerlm(n, f, iter)
+powerlm(n, f, iter = 100)
 }
 \arguments{
 \item{n}{sample size}

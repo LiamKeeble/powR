@@ -4,7 +4,7 @@
 \alias{powerMetaR}
 \title{Power simulation for random effects meta analysis model}
 \usage{
-powerMetaR(n, f, var, iter)
+powerMetaR(n, f, var, iter = 100)
 }
 \arguments{
 \item{n}{sample size}
