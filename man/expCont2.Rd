@@ -12,6 +12,10 @@ expCont2(n, mean1, var1, mean2, var2)
 \item{mean1}{mean of dependent variable for control group}
 
 \item{var1}{standard deviation of dependent variable for experimental group}
+
+\item{mean2}{mean of dependent variable for experomental group}
+
+\item{var2}{standard deviation of dependent variable for experimental group}
 }
 \description{
 Simulate experimental data with two conditions and a continuous outcome
