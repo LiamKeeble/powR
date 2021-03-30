@@ -25,8 +25,7 @@ Current dependencies are the ggplot2, lme4 and metafor r packages.
 
 # Usage 
 
-See the 'man' folder for individual functions and their usage. Examples will soon be posted below.
-
+See the 'man' folder for individual functions and their usage. 
 
 # Data simulation
 
