@@ -104,4 +104,22 @@ powerMetaR(20,0.3,1,100)
 
 # Plotting power
 
+The same arguments can be used to plot power. The following function plots the power from 100 simulations of a linear model applied to data with a two level categorical predictor, a sample size of 200, and an effect size of 0.3.
+
+```
+powLmPlot(200,0.3,100)
+```
+
+The next code chunk does the same for a generalised linear model with a binomial outcome.
+
+```
+powGlmPlot(200,0.8,100)
+```
+The next code chunk does the same for a random effects meta analysis model.
+
+```
+powMetaPlot(20,0.3,1,100)
+```
+
+
 
