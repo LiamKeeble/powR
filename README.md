@@ -22,6 +22,7 @@ devtools::install_github("LiamKeeble/powR")
 
 Current dependencies are the ggplot2, lme4 and metafor r packages.
 
+Make sure they are installed before using the functions.
 
 # Usage 
 
