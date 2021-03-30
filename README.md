@@ -48,6 +48,12 @@ To simulate data for a study with a binomial variable as the dependent variable 
 expBin2(200,0.5,0.8)
 ```
 
+A participant index can also be added to this function in order to simulate repeated measures data.
+
+```
+expBin2Rand(200,0.5,0.8,20)
+```
+
 
 
 # Model simulation
