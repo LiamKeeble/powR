@@ -57,9 +57,50 @@ expBin2Rand(200,0.5,0.8,20)
 
 # Model simulation
 
+The following code returns a p value from a simulated linear model with a binary predictor, a sample size of 200 and an effect size of 0.3.
+
+```
+lmP(200,0.3)
+```
+
+The same can be done for a generalised linear model with a binomial outcome, a sample size of 200 and where the control group has a probability of success of 0.5 and the probability of success of the experiment group is 0.8.
+
+```
+binGlmP(200,0.8)
+```
+
+A random effects intercept for repeated measures data can be added to the above simulation using the following code.
+
+```
+binGlmPRand(200,0.8,20)
+```
+
+A p value for a random effects meta analysis model assessing the overall effect sizes of studies with an average effect size of 0.3 and an average standard deviation of 1 can be simulated using the following function.
+
+```
+metaRsim(20,0.3,1)
+```
 
 # Power simulation
 
+
+Power analysis can be conducted for each of the above model simulations. To simulate the power of the afforementioned linear model can be assessed with the following code, using 100 iterations of a linear model with a binomial predictor and an effect size of 0.3 and a sample size of 200.
+
+```
+powerlm(200,0.3,100)
+```
+
+For a binomial generalised linear model the code is:
+
+```
+powerBinGlm(200,0.8,100)
+```
+
+And for a meta analysis random effects model:
+
+```
+powerMetaR(20,0.3,1,100)
+```
 
 # Plotting power
 
