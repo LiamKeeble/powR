@@ -165,10 +165,10 @@ return(summary(m)$coefficients[2,4])
 }
 
 
-#' Simulation of confidence intervals for basic linear model
+#' Simulation of margin of error for basic linear model
 #' @param n sample size
 #' @param f effect size
-#' @return confidence interval
+#' @return margin of error
 #' @export
 
 lmME=function(n,f){
@@ -178,6 +178,57 @@ condition=c(rep("control",times=n/2),rep("experiments",times=n/2))
 m=lm(y~condition)
 return((confint(m)[2,2]-confint(m)[2,1])/2)
 }
+
+#' Simulation of margin of error for binomial generalised linear model
+#' @param n sample size
+#' @param f effect size
+#' @return margin of error
+#' @export
+
+glmME=function(n,f){
+options(scipen=999)
+y=c(rbinom(n/2,1,0.5),rbinom(n/2,1,f))
+condition=c(rep("control",times=n/2),rep("experimental",times=n/2))
+m=glm(y~condition, family=binomial)
+return((confint(m)[2,2]-confint(m)[2,1])/2)
+}
+
+
+#' Precision simulation for basic linear model with a two level categorical predictor
+#' @param n sample size
+#' @param f effect size
+#' @param iter number of iterations of simulation
+#' @return Statistical precision of a model
+#' @export
+
+precisionlm=function(n,f,iter=100){
+output=NULL
+for(i in 1:iter){
+output[i]=lmME(n=n,f=f)
+}
+p=output
+precision=mean(p)
+precision
+}
+
+
+#' Precision simulation for binomial generalised linear model with a two level categorical predictor
+#' @param n sample size
+#' @param f effect size
+#' @param iter number of iterations of simulation
+#' @return Statistical precision of model
+#' @export
+
+precisionglm=function(n,f,iter=100){
+output=NULL
+for(i in 1:iter){
+output[i]=glmME(n=n,f=f)
+}
+p=output
+precision=mean(p)
+precision
+}
+
 
 
 #' Power simulation for basic linear model with a two level categorical predictor
