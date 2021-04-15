@@ -165,6 +165,21 @@ return(summary(m)$coefficients[2,4])
 }
 
 
+#' Simulation of confidence intervals for basic linear model
+#' @param n sample size
+#' @param f effect size
+#' @return confidence interval
+#' @export
+
+lmME=function(n,f){
+options(scipen=999)
+y=c(rnorm(n=n/2,mean=0,sd=1), rnorm(n=n/2, mean=f, sd=1))
+condition=c(rep("control",times=n/2),rep("experiments",times=n/2))
+m=lm(y~condition)
+return((confint(m)[2,2]-confint(m)[2,1])/2)
+}
+
+
 #' Power simulation for basic linear model with a two level categorical predictor
 #' @param n sample size
 #' @param f effect size
