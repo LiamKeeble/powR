@@ -82,6 +82,19 @@ A p value for a random effects meta analysis model assessing the overall effect 
 metaRsim(20,0.3,1)
 ```
 
+Margin of error for a model estimate can be returned using the function:
+
+```
+lmME(100,0.5)
+```
+
+Using the same parameters as the above simulations. This functions returns the Margin of Error for a basic linear model with a binomial categorical predictor. The following code does the same for a generalised linear model with a binomial outcome.
+
+```
+glmME(100,0.8)
+```
+
+
 # Power simulation
 
 
@@ -121,6 +134,40 @@ The next code chunk does the same for a random effects meta analysis model.
 ```
 powMetaPlot(20,0.3,1,100)
 ```
+
+
+# Simulating precision
+
+The following code iterates simulations of linear models and returns the mean margin of error for model estimates as a measure of precision of that model.
+
+```
+precisionlm(100,0.5,100)
+```
+
+The final parameter states the number of iterations, and the default number is 100. The following code does the same for a generalised linear model with a binomial outcome variable.
+
+```
+precisionglm(100,0.8,100)
+```
+
+Again, the default number of iterations is 100.
+
+
+
+# Plotting precision
+
+The following code plots the density of margin of errors for estimates returned from a basic linear model with a binomial categorical predictor. The models all use data with a sample size of 100 and an effect size of 0.5.
+
+```
+precisionlmPlot(100,0.5,100)
+```
+
+The same can be done for a generalised linear model with a binomial outcome variable using the following code.
+
+```
+precisionglmPlot(100,0.5,100)
+```
+
 
 
 
