@@ -382,6 +382,27 @@ plot
 }
 
 
+#' Plot the distribution of margin of errors from a linear model simulation
+#' @param n sample size
+#' @param f effect size
+#' @param iter number of iterations of simulation
+#' @return plot of distribution of margin of errors
+#' @export
+
+precisionlmPlot=function(n,f,iter=100){
+output=NULL
+for (i in 1:iter){
+output[i]=lmME(n=n,f=f)
+}
+output=data.frame(output)
+
+plot=ggplot2::ggplot(output, aes(output))+
+	geom_density()+
+	ggtitle("Density plot of margin of errors")+
+	xlab("ME values")+
+	ylab("Frequency of values")
+plot
+}
 
 
 #' Plot distribution of p values from meta analysis random effects model 
